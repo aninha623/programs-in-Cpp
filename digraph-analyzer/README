@@ -1,0 +1,21 @@
+♡
+anna andrade 
+aandra12
+B4E772
+
+explaining my program:
+in digraph_functions.cpp, i defined the following functions:
+preprocess_text
+process_text
+digraph_sorter_a
+digraph_sorter_r
+digraph_sorter_c
+sort_descending
+queries
+
+these functions do the following:
+preprocess_text takes in a string and strips it of any punctuation and returns the lowercase of the string
+process_text takes in a file and returns a map of vectors where the keys are the digraphs and the keys are the words where the digraphs appear
+the 3 digraph_sorter functions sort the digraphs and print them in the specified order, ascii, reverse ascii, or count (descending) value
+sort_descending is a helper function that compares vector sizes and is used in digraph_sorter_c to compare vectors
+queries handles all user inputs 
