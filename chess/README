@@ -1,0 +1,36 @@
+team:
+anna andrade aandra12
+mirabel luo mluo12
+sophie noureddine snoured1
+
+design:
+pieces:
+    bishop: bishop has legal_move_shape and legal_capture_shape which inherits legal_move_shape, which checks if the end position is the appropriate distance from start position
+    king: king has legal_move_shape and legal_capture_shape which inherits legal_move_shape, which checks if the end position is the appropriate distance from start position
+    knight: knight has legal_move_shape and legal_capture_shape which inherits legal_move_shape which checks if the end position is the appropriate distance from the start position
+    pawn: pawn has legal_move_shape and legal_capture_shape, legal_move_shape checks if end position corresponds to the correct shape and legal_capture_shape checks if an opposing piece exists within the legal capture shape.
+    queen: queen has legal_move_shape and legal_capture_shape which inherits legal_move_shape, which checks if the end position is the appropriate distance from start position
+    rook: rook has legal_move_shape and legal_capture_shape which inherits legal_move_shape which checks if the end position is vertical or horizontal to the start position
+
+board:
+    copy constructor: creates a deep copy of the board
+    clear_board: takes all pieces off of board in order to ensure piece from loaded file can be properly added
+    display: displays a board with pieces in designated positions    
+    move_piece: helper to make_move
+    path_is_clear: helper to make_move and in_check, checks if another piece is in the pa
+    iterator: created an iterator class to move through the positions on the board. the class has a dereference operator, preincrement operator, and equality operator overload as well as a designated begin and end for the board.
+game:
+    make_move: checks validity of move on a deep copy of the current board state, then makes move if legal
+    in_check: in_check checks if the king is threatened by iterating over the board, checking each piece to see if they are null and the other player's piece, then checking if the path is clear between the piece and the king to see if other pieces block check. returns true if the piece is in check and false if not.
+    in_mate: in_mate checks first if the king is in check then if the king can capture the piece or move out of check or if the other pieces of the player's color can capture or block check. if nothing can take the king out of check(checkedby iterating over the board), the player is in checkmate and in_mate returns true.
+    in_stalemate: in_stalemate checks first if the king is in check, as stalemate starts with the king out of check, and then iterates over the board to check for pieces. if all move by any piece puts the king in check, the player is in a stalemate and true is returned. the in_mate and in_stalemate functions both create a copy of the game to check possible moves and both call in_check and move_piece
+    find_king: (private) find_king is a helper function for the in_check/mate/stalemate functions to locate the position of the king by iterating over the board and finding when K or k appears.
+    point_value: iterates through entire board and counts each piece of designated player on board, incrementing indicated points per piece and rechecks every time a move is made.
+main:
+    general structure of the helper code is maintained, added try-catch blocks to handle move errors and i/o errors gracefully
+
+completeness: all implementation complete to the best of our knowledge, and our testing for various games as well as Mystery pieces showed no errors
+
+special instructions: N/A
+
+other: members contributed equally, if gitlog states that less than 6 commits were pushed for some users is because of git branches and then completely ignoring the branches after a certain point lol
