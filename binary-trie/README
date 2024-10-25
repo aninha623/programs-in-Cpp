@@ -1,0 +1,11 @@
+hw 7 readme
+anna andrade
+aandra12
+B4E772
+
+CTree: used .h file provided. did not make any helper functions for ctree.cpp; all functions written in ctree.cpp were defined in the h file written by the professor
+in all overloading functions, i called the longer version of the function (overloading + called addchild or add sibling, addsibling/addchild(ch) called the version of add with
+the root instead).
+
+Tree: .h file taken from CTree.h and modified to change data type to be generic data type. pretty much just took all my CTree functions and modified them slightly to be able to use 
+generic data types. no other changes besides that. same logic used as in CTree.
